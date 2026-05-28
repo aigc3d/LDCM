@@ -1,0 +1,10 @@
+torch
+torchvision
+numpy
+pillow
+scipy
+opencv-python
+matplotlib
+huggingface_hub
+tqdm
+requests

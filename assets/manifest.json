@@ -1,0 +1,93 @@
+{
+  "format": {
+    "image": "RGB PNG, uint8, shape HxWx3",
+    "gt_depth": "metric depth in meters, float32 npy; uint16 PNG stores millimeters",
+    "sparse_depth": "sparse metric depth in meters, float32 npy; zero means missing"
+  },
+  "samples": [
+    {
+      "name": "sample_1",
+      "source": "/tmp/Prior-Depth-Anything/assets/sample-1",
+      "image": "image.png",
+      "gt_depth": [
+        "gt_depth.npy",
+        "gt_depth_mm_uint16.png"
+      ],
+      "sparse_depth": [
+        "sparse_depth.npy",
+        "sparse_depth_mm_uint16.png"
+      ],
+      "shape": [
+        480,
+        640
+      ],
+      "sparse_points": 1000,
+      "gt_valid_pixels": 284830,
+      "gt_depth_min_m": 1.159999966621399,
+      "gt_depth_max_m": 3.490000009536743
+    },
+    {
+      "name": "sample_2",
+      "source": "/tmp/Prior-Depth-Anything/assets/sample-2",
+      "image": "image.png",
+      "gt_depth": [
+        "gt_depth.npy",
+        "gt_depth_mm_uint16.png"
+      ],
+      "sparse_depth": [
+        "sparse_depth.npy",
+        "sparse_depth_mm_uint16.png"
+      ],
+      "shape": [
+        384,
+        512
+      ],
+      "sparse_points": 1000,
+      "gt_valid_pixels": 196608,
+      "gt_depth_min_m": 1.6729999780654907,
+      "gt_depth_max_m": 2.5969998836517334
+    },
+    {
+      "name": "sample_3",
+      "source": "/tmp/Prior-Depth-Anything/assets/sample-3",
+      "image": "image.png",
+      "gt_depth": [
+        "gt_depth.npy",
+        "gt_depth_mm_uint16.png"
+      ],
+      "sparse_depth": [
+        "sparse_depth.npy",
+        "sparse_depth_mm_uint16.png"
+      ],
+      "shape": [
+        480,
+        640
+      ],
+      "sparse_points": 405,
+      "gt_valid_pixels": 235974,
+      "gt_depth_min_m": 1.1299999952316284,
+      "gt_depth_max_m": 2.99399995803833
+    },
+    {
+      "name": "sample_5",
+      "source": "/tmp/Prior-Depth-Anything/assets/sample-5",
+      "image": "image.png",
+      "gt_depth": [
+        "gt_depth.npy",
+        "gt_depth_mm_uint16.png"
+      ],
+      "sparse_depth": [
+        "sparse_depth.npy",
+        "sparse_depth_mm_uint16.png"
+      ],
+      "shape": [
+        480,
+        640
+      ],
+      "sparse_points": 1000,
+      "gt_valid_pixels": 262192,
+      "gt_depth_min_m": 1.3380000591278076,
+      "gt_depth_max_m": 3.815999984741211
+    }
+  ]
+}
