@@ -36,13 +36,6 @@ LDCM reconstructs dense metric depth from a single RGB image and sparse metric d
 
 See the [method and implementation details](docs/poisson_completion.md).
 
-## To Do List
-
-- [x] Release LDCM model code.
-- [x] Release Poisson completion utility.
-- [x] Add bundled demo assets.
-- [x] Release model checkpoint on Hugging Face.
-
 ## Installation
 
 LDCM uses Python 3.10. Install a PyTorch build that matches your CUDA version, then install the dependencies:
