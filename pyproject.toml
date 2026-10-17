@@ -8,6 +8,15 @@ version = "0.1.0"
 description = "Large Depth Completion Model from sparse metric depth observations."
 readme = "README.md"
 requires-python = ">=3.10"
+dependencies = [
+    "ninja>=1.11",
+]
+
+[project.optional-dependencies]
+poisson-acceleration = []
 
 [tool.setuptools.packages.find]
 include = ["ldcm*"]
+
+[tool.setuptools.package-data]
+"ldcm.poisson_completion" = ["_native.cpp", "_native.cu"]

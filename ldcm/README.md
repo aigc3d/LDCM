@@ -34,7 +34,7 @@ ldcm/
   ldcm.py
   depth_encoder.py
   head.py
-  poisson_completion.py
+  poisson_completion/
   utils.py
   layers/
   moge/

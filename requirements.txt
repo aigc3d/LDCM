@@ -8,3 +8,4 @@ matplotlib
 huggingface_hub
 tqdm
 requests
+ninja>=1.11

@@ -129,6 +129,8 @@ with torch.no_grad():
 
 The output `completed_depth` has shape `[B, 1, H, W]`. The solver first aligns the monocular prior to the sparse metric depth and then runs multi-scale Poisson optimization from coarse to fine. An optional `confidence` map with shape `[B, 1, H, W]` can be passed to weight the monocular-gradient term during Poisson solving.
 
+The updated solver uses robust sparse-observation weights and edge-aware monocular guidance. CUDA float32 inputs automatically use the accelerated Triton/CUDA Graph path when available, with optional native reductions compiled on first use; otherwise it falls back to the PyTorch implementation.
+
 ## License
 
 LDCM is licensed under the Apache License, Version 2.0. See `LICENSE` for details.
