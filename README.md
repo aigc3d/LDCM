@@ -14,6 +14,28 @@ LDCM reconstructs dense metric depth from a single RGB image and sparse metric d
   <img src="assets/teaser.webp" width="720">
 </p>
 
+## News
+
+- **[2026-10-15]** Updated the **Poisson reconstruction** stage used to construct LDCM's coarse depth prior, adding robust sparse-observation weighting and edge-aware monocular guidance. The update improves both RMSE and AbsRel on the KITTI selected validation set, ScanNet++, and synthetic cases with analytical ground truth. The updated solver also runs **4.34–6.71× faster** across the tested resolutions on NVIDIA H20.
+
+| Resolution (W × H) | Inference time (ms) | Speedup |
+| --- | ---: | ---: |
+| 256 × 192 | 27.23 → 6.27 | **4.34×** |
+| 512 × 384 | 41.07 → 9.21 | **4.46×** |
+| 518 × 345 | 62.48 → 10.88 | **5.74×** |
+| 518 × 388 | 54.11 → 10.32 | **5.24×** |
+| 1216 × 352 | 176.30 → 26.29 | **6.71×** |
+
+**Depth-completion accuracy (lower is better)**
+
+| Dataset | RMSE (m) | AbsRel (%) |
+| --- | ---: | ---: |
+| KITTI | 2.294 → **2.205** | 3.91 → **3.65** |
+| ScanNet++ | 0.108 → **0.089** | 2.80 → **1.83** |
+| Synthetic | 0.372 → **0.274** | 4.13 → **2.66** |
+
+See the [method and implementation details](docs/poisson_completion.md).
+
 ## To Do List
 
 - [x] Release LDCM model code.
@@ -42,6 +64,8 @@ pip install -e .
 ```
 
 The bundled MoGe code depends on `utils3d`; install it from the pinned commit above.
+
+Poisson completion can also be imported on its own. The standard installation includes Ninja, and available CUDA acceleration is selected automatically. Native reductions build on first use when a CUDA compiler is available; otherwise the solver keeps the Triton/CUDA Graph path, or uses PyTorch if Triton is unavailable.
 
 ## Pretrained Models
 
